@@ -1,0 +1,29 @@
+Index: app/Observers/ListsObserver.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Observers/ListsObserver.php	(date 1552785093000)
++++ app/Observers/ListsObserver.php	(date 1552785093000)
+@@ -4,12 +4,19 @@
+ 
+ 
+ use App\Models\Lists;
+-use App\Models\ListsValidation;
++use App\Traits\ListsValidation;
+ 
+ class ListsObserver
+ {
++
++    use ListsValidation;
++
+     public function creating(Lists $lists)
+     {
+-        ListsValidation::validateList();
++        try {
++            $this->validate();
++        } catch (\Exception $exception) {
++            return false;
++        }
+     }
+ }

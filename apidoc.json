@@ -1,0 +1,10 @@
+{
+  "name": "Ebs",
+  "version": "1.0.0",
+  "description": "Api Documentation",
+  "apidoc": {
+    "title": "Api Docs",
+    "url" : "http://localhost"
+  },
+  "sampleUrl": "http://localhost"
+}
