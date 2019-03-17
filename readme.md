@@ -11,3 +11,13 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+## using:
+   - Laravel Passport;
+   - Mysql;
+
+## Need to run:
+
+1. php artisan migrate:refresh --seed
+
+2. php artisan passport:install
